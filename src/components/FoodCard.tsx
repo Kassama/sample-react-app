@@ -42,7 +42,10 @@ const FoodCard: React.FC = () => {
   };
 
   return (
-    <Card className="max-w-[400px]">
+    // <Card className="max-w-[400px]">
+    // <Card className="max-w-[400px] bg-green-100">
+    <Card className="max-w-[400px] bg-gradient-to-r from-green-400 via-green-500 to-green-600">
+
       <CardHeader className="flex gap-3">
         <form
           onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
@@ -99,10 +102,12 @@ const FoodCard: React.FC = () => {
         <div className="flex flex-col items-left">
           {error && <p className="text-xs text-red-600 ">{error}</p>}
           {data && (
-            <p className="text-xs  text-gray-600 ">Last update successful.</p>
+            // <p className="text-xs  text-white-600 ">Last update successful.</p>
+            <p className="text-xs text-white">Last update successful.</p>
           )}
           {!data && (
-            <p className="text-xs  text-gray-600 ">Waiting for input...</p>
+            // <p className="text-xs  text-white-600 ">Waiting for input...</p>
+            <p className="text-xs text-white">Waiting for input...</p>
           )}
         </div>
       </CardFooter>
